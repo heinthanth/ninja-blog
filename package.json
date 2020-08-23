@@ -1,0 +1,38 @@
+{
+  "name": "ninja-blog",
+  "version": "1.0.0",
+  "description": "Blog website of Hein Thanth",
+  "main": "pages/index.js",
+  "scripts": {
+    "dev": "npm run rest && next dev",
+    "build": "next build",
+    "start": "next start",
+    "rest": "json-server --watch db.json --port 8000 --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heinthanth/ninja-blog.git"
+  },
+  "author": {
+    "name": "Hein Thanth",
+    "email": "me@heinthanth.com",
+    "url": "https://heinthanth.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heinthanth/ninja-blog/issues"
+  },
+  "homepage": "https://github.com/heinthanth/ninja-blog#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap-icons": "^1.0.0-alpha5",
+    "classnames": "^2.2.6",
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "json-server": "^0.16.1"
+  }
+}
