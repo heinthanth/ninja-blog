@@ -13,14 +13,14 @@ const IndexPage = (props) => (
                 Just random articles that I wrote in free times ...
             </p>
             <div className={index.tagList}>
-                {/* <TagList tags={props.tags} withCount /> */}
+                <TagList tags={props.allTags} withCount />
             </div>
             <section className="row">
                 {props.posts.map((post) => (
-                    <PostCard title={post.title} tags={post.tags} />
+                    <PostCard title={post.title} tags={post.tags.split(",").map(i => i.trim())} />
                 ))}
             </section>
-            <Paginator baseRoute="/p" ent="/" maxItem={props.maxItem} current={props.pid} />
+            <Paginator baseRoute={props.baseRoute} baseRouteWith={props.baseRouteWith} ent={props.ent} maxItem={props.maxItem} current={props.pid} />
         </div>
     </Base>
 );

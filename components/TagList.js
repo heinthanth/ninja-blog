@@ -1,14 +1,18 @@
 import Link from "next/link";
 import utils from "../sass/components/Utils.module.sass";
+const { countOccurrences } = require("../utils/utils");
 
-const TagList = (props) =>
-    props.tags.map((tag) => (
-        <Link href={tag.to}>
-            <a key={tag.id} className={utils.tag}>
-                {tag.name}
-                {props.withCount ? ` | ${tag.child}` : null}
+const TagList = (props) => {
+    let count = countOccurrences(props.tags);
+
+    return Object.keys(count).map(tag => (
+        <Link href={`/tag/?t=${tag}`} as={`/tag/${tag}`}>
+            <a key={tag} className={utils.tag}>
+                {tag}
+                {props.withCount ? ` | ${count[tag]}` : null}
             </a>
         </Link>
     ));
+};
 
 export default TagList;

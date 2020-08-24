@@ -4,12 +4,31 @@ import Link from "next/link";
 import pg from "../sass/components/Paginator.module.sass";
 
 const Paginator = (props) => {
+    let baseRoute = props.baseRoute;
+
+    let pattern = /(:[A-Za-z0-9]+)/g;
+    let match = baseRoute.match(pattern);
+
+    let href = props.ent;
+
+    if (match) {
+        match.forEach((i) => {
+            baseRoute = baseRoute.replace(
+                i,
+                props.baseRouteWith[i.substring(1)]
+            );
+            href = `${href}?${i.substring(1)}=${props.baseRouteWith[i.substring(1)]}&`;
+        });
+    } else {
+        href = href + "?";
+    }
+
     let items = [];
     if (Number(props.current) - 1 >= 1) {
         items.push(
             <Link
-                href={`${props.ent}?id=${Number(props.current) - 1}`}
-                as={`${props.baseRoute}/${Number(props.current) - 1}`}
+                href={`${href}p=${Number(props.current) - 1}`}
+                as={`${baseRoute}p/${Number(props.current) - 1}`}
             >
                 <a className={pg.item}>{"<"}</a>
             </Link>
@@ -23,7 +42,7 @@ const Paginator = (props) => {
     }
     for (let i = 1; i <= props.maxItem; i++) {
         items.push(
-            <Link href={`${props.ent}?id=${i}`} as={`${props.baseRoute}/${i}`}>
+            <Link href={`${href}p=${i}`} as={`${baseRoute}p/${i}`}>
                 {props.current == i ? (
                     <a className={cx(pg.item, pg.activeItem)}>{i}</a>
                 ) : (
@@ -35,8 +54,8 @@ const Paginator = (props) => {
     if (Number(props.current) + 1 <= props.maxItem) {
         items.push(
             <Link
-                href={`${props.ent}?id=${Number(props.current) + 1}`}
-                as={`${props.baseRoute}/${Number(props.current) + 1}`}
+                href={`${href}p=${Number(props.current) + 1}`}
+                as={`${baseRoute}p/${Number(props.current) + 1}`}
             >
                 <a className={pg.item}>{">"}</a>
             </Link>
