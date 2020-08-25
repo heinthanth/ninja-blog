@@ -16,12 +16,14 @@ const TagList = (props) => {
 
     return (
         <React.Fragment>
-            <Link key="all" href={`/`}>
-                <a className={utils.tag}>
-                    all
-                    {props.withCount ? ` | ${props.allPost}` : null}
-                </a>
-            </Link>
+            {props.withAll ? (
+                <Link key="all" href={`/`}>
+                    <a className={utils.tag}>
+                        all
+                        {props.withCount ? ` | ${props.allPost}` : null}
+                    </a>
+                </Link>
+            ) : null}
             {tags}
         </React.Fragment>
     );

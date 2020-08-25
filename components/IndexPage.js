@@ -19,7 +19,7 @@ const IndexPage = (props) => {
                     Just random articles that I wrote in free times ...
                 </p>
                 <div className={index.tagList}>
-                    <TagList allPost={props.allPost.length} tags={props.allTags} withCount />
+                    <TagList allPost={props.allPost.length} tags={props.allTags} withCount withAll />
                 </div>
                 <div className={index.moveableContainer}>
                     <div
@@ -42,9 +42,7 @@ const IndexPage = (props) => {
                         {props.posts.map((post) => (
                             <PostCard
                                 key={post.id}
-                                title={post.title}
-                                date={post.created_at}
-                                tags={post.tags.split(",").map((i) => i.trim())}
+                                post={post}
                             />
                         ))}
                     </section>

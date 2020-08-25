@@ -5,9 +5,11 @@ import utils from "../sass/components/Utils.module.sass";
 const Contact = () => (
     <section className="pt-4 pb-3 pb-md-2">
         <h1 className={cx(utils.sectionTitle)}>Get in Touch</h1>
-        <p className={cx(utils.sectionInfo, "mb-2")}>
-            Just some methods to contact me ...
+        <p className={cx(utils.sectionInfo, "mb-4")}>
+            Just some methods to stay in touch with me ...
         </p>
+        <div className="mb-4 font-normal">Hey! where is the form for newsletter? - I don't want to send you alot of emails, which I hate too. Just visit me when you remember.</div>
+        <div className="mb-2">Reach me via -</div> 
         <ul className={contact.socialLink}>
             <li>
                 <a
