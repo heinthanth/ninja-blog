@@ -1,6 +1,9 @@
 import IndexPage from "../components/IndexPage";
+import Error from "next/error";
 
 const Index = (props) => {
+    if(props.errorCode) return <Error statusCode={props.errorCode} />
+
     return <IndexPage { ...props } />;
 };
 
@@ -19,6 +22,8 @@ Index.getInitialProps = async ({ query }) => {
 
     res = await fetch(`http://127.0.0.1:8000/posts?_page=${id}&_limit=4`);
     let posts = await res.json();
+
+    if (posts.length == 0) return { errorCode: 404  };
 
     return {
         allPost,
