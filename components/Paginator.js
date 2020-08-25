@@ -17,7 +17,9 @@ const Paginator = (props) => {
                 i,
                 props.baseRouteWith[i.substring(1)]
             );
-            href = `${href}?${i.substring(1)}=${props.baseRouteWith[i.substring(1)]}&`;
+            href = `${href}?${i.substring(1)}=${
+                props.baseRouteWith[i.substring(1)]
+            }&`;
         });
     } else {
         href = href + "?";
@@ -27,6 +29,7 @@ const Paginator = (props) => {
     if (Number(props.current) - 1 >= 1) {
         items.push(
             <Link
+                key={0}
                 href={`${href}p=${Number(props.current) - 1}`}
                 as={`${baseRoute}p/${Number(props.current) - 1}`}
             >
@@ -35,14 +38,14 @@ const Paginator = (props) => {
         );
     } else {
         items.push(
-            <a style={{ cursor: "pointer" }} className={cx(pg.item)}>
+            <a key={0} style={{ cursor: "pointer" }} className={cx(pg.item)}>
                 {"<"}
             </a>
         );
     }
     for (let i = 1; i <= props.maxItem; i++) {
         items.push(
-            <Link href={`${href}p=${i}`} as={`${baseRoute}p/${i}`}>
+            <Link key={i} href={`${href}p=${i}`} as={`${baseRoute}p/${i}`}>
                 {props.current == i ? (
                     <a className={cx(pg.item, pg.activeItem)}>{i}</a>
                 ) : (
@@ -54,6 +57,7 @@ const Paginator = (props) => {
     if (Number(props.current) + 1 <= props.maxItem) {
         items.push(
             <Link
+                key={Number(props.maxItem) + 1}
                 href={`${href}p=${Number(props.current) + 1}`}
                 as={`${baseRoute}p/${Number(props.current) + 1}`}
             >
@@ -62,12 +66,29 @@ const Paginator = (props) => {
         );
     } else {
         items.push(
-            <a style={{ cursor: "pointer" }} className={cx(pg.item)}>
+            <a
+                key={Number(props.maxItem) + 1}
+                style={{ cursor: "pointer" }}
+                className={cx(pg.item)}
+            >
                 {">"}
             </a>
         );
     }
-    return <div className={pg.paginationContainer}>{items}</div>;
+    return (
+        <div className={pg.container}>
+            <div className={pg.itemsContainer}>{items}</div>
+            <button className={pg.toggleMoveBottom} onClick={() => {props.setPaginatorInBottom(!props.PaginatorInBottom)}}>
+                <svg className={cx("bi", pg.toggleMoveBottomIcon)} fill="currentColor">
+                    {props.PaginatorInBottom ? (
+                        <use href="/icons/bootstrap-icons.svg#arrow-bar-up" />
+                    ) : (
+                        <use href="/icons/bootstrap-icons.svg#arrow-bar-down" />
+                    )}
+                </svg>
+            </button>
+        </div>
+    );
 };
 
 export default Paginator;

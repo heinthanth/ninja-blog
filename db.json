@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "Hello, World!",
-            "created_at": "8/23/2020, 5:19:04 PM",
+            "created_at": "8/23/2020, 5:19 PM",
             "imgUrl": "https://i.picsum.photos/id/604/536/354.jpg?hmac=zUQlGas-vWNrCG1R1mr5Obj72N05qiQfwedkiNrZaqw",
             "tags": "docker, web",
             "content": "Some content One"
@@ -11,7 +11,7 @@
         {
             "id": 2,
             "title": "Hello, World Two!",
-            "created_at": "8/23/2020, 5:19:04 PM",
+            "created_at": "8/23/2020, 5:19 PM",
             "imgUrl": "https://i.picsum.photos/id/604/536/354.jpg?hmac=zUQlGas-vWNrCG1R1mr5Obj72N05qiQfwedkiNrZaqw",
             "tags": "docker, php",
             "content": "Some content Two"
@@ -19,7 +19,7 @@
         {
             "id": 3,
             "title": "Hello, World Three!",
-            "created_at": "8/23/2020, 5:19:04 PM",
+            "created_at": "8/23/2020, 5:19 PM",
             "imgUrl": "https://i.picsum.photos/id/604/536/354.jpg?hmac=zUQlGas-vWNrCG1R1mr5Obj72N05qiQfwedkiNrZaqw",
             "tags": "linux, php",
             "content": "Some content Three"
@@ -27,7 +27,7 @@
         {
             "id": 4,
             "title": "Hello, World Four!",
-            "created_at": "8/23/2020, 5:19:04 PM",
+            "created_at": "8/23/2020, 5:19 PM",
             "imgUrl": "https://i.picsum.photos/id/604/536/354.jpg?hmac=zUQlGas-vWNrCG1R1mr5Obj72N05qiQfwedkiNrZaqw",
             "tags": "music",
             "content": "Some content Four"
@@ -35,7 +35,7 @@
         {
             "id": 5,
             "title": "Hello, World Five!",
-            "created_at": "8/23/2020, 5:19:04 PM",
+            "created_at": "8/23/2020, 5:19 PM",
             "imgUrl": "https://i.picsum.photos/id/604/536/354.jpg?hmac=zUQlGas-vWNrCG1R1mr5Obj72N05qiQfwedkiNrZaqw",
             "tags": "mac",
             "content": "Some content Five"
@@ -43,7 +43,7 @@
         {
             "id": 6,
             "title": "Hello, World Six!",
-            "created_at": "8/23/2020, 5:19:04 PM",
+            "created_at": "8/23/2020, 5:19 PM",
             "imgUrl": "https://i.picsum.photos/id/604/536/354.jpg?hmac=zUQlGas-vWNrCG1R1mr5Obj72N05qiQfwedkiNrZaqw",
             "tags": "docker",
             "content": "Some content Six"
@@ -51,7 +51,7 @@
         {
             "id": 7,
             "title": "Hello, World Seven!",
-            "created_at": "8/23/2020, 5:19:04 PM",
+            "created_at": "8/23/2020, 5:19 PM",
             "imgUrl": "https://i.picsum.photos/id/604/536/354.jpg?hmac=zUQlGas-vWNrCG1R1mr5Obj72N05qiQfwedkiNrZaqw",
             "tags": "docker",
             "content": "Some content Seven"
@@ -59,7 +59,7 @@
         {
             "id": 8,
             "title": "Hello, World Eight!",
-            "created_at": "8/23/2020, 5:19:04 PM",
+            "created_at": "8/23/2020, 5:19 PM",
             "imgUrl": "https://i.picsum.photos/id/604/536/354.jpg?hmac=zUQlGas-vWNrCG1R1mr5Obj72N05qiQfwedkiNrZaqw",
             "tags": "docker",
             "content": "Some content Eight"
@@ -67,7 +67,7 @@
         {
             "id": 9,
             "title": "Hello, World Nine!",
-            "created_at": "8/23/2020, 5:19:04 PM",
+            "created_at": "8/23/2020, 5:19 PM",
             "imgUrl": "https://i.picsum.photos/id/604/536/354.jpg?hmac=zUQlGas-vWNrCG1R1mr5Obj72N05qiQfwedkiNrZaqw",
             "tags": "php",
             "content": "Some content Nine"

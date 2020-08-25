@@ -6,7 +6,7 @@ const Index = (props) => {
 
 Index.getInitialProps = async ({ query }) => {
     const id = query.p || 1;
-    let res = await fetch(`http://192.168.43.241:8000/posts`);
+    let res = await fetch(`http://127.0.0.1:8000/posts`);
     let allPost = await res.json();
     let allTags = [];
 
@@ -17,7 +17,7 @@ Index.getInitialProps = async ({ query }) => {
 
     let maxItem = Math.ceil(allPost.length / 4);
 
-    res = await fetch(`http://192.168.43.241:8000/posts?_page=${id}&_limit=4`);
+    res = await fetch(`http://127.0.0.1:8000/posts?_page=${id}&_limit=4`);
     let posts = await res.json();
 
     return {

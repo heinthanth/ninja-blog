@@ -28,7 +28,7 @@ const PostCard = (props) => (
                     <TagList tags={props.tags} />
                 </div>
                 <div className={cx(pc.datetime)}>
-                    {new Date().toLocaleString()}
+                    {props.date}
                 </div>
             </div>
         </div>
